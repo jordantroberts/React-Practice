@@ -14,7 +14,7 @@ render() {
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button onClick={() => this.handleIncrement}
+        <button onClick={this.handleIncrement}
         className="btn-secondary btn-sm"
         >
             Increment
