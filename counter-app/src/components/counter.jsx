@@ -6,7 +6,7 @@ state = {
     count: 0
 };
 
-handleIncrement = (product) => {
+handleIncrement = product => {
     this.setState({count: this.state.count+1})
 };
 
