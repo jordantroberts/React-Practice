@@ -6,7 +6,7 @@ state = {
     count: 0
 };
 
-handleIncrement = product => {
+handleIncrement = () => {
     this.setState({count: this.state.count+1})
 };
 
@@ -14,9 +14,10 @@ render() {
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button onClick={() => this.handleIncrement(product)}
+        <button onClick={() => this.handleIncrement}
         className="btn-secondary btn-sm"
-        >Increment
+        >
+            Increment
         </button>
       </div>
     );
