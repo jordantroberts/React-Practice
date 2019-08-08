@@ -6,14 +6,14 @@ state = {
     count: 0
 };
 
-constructor(){
-    super()
-    // The super keyword is used to access and call functions on an object's parent.
-    this.handleIncrement = this.handleIncrement.bind(this); 
-    // To set the value of 'this' as otherwise this.state is undefined in handleIncrement
-}
+// constructor(){
+//     super()
+//     // The super keyword is used to access and call functions on an object's parent.
+//     this.handleIncrement = this.handleIncrement.bind(this); 
+//     // To set the value of 'this' as otherwise this.state is undefined in handleIncrement
+// }
  
-handleIncrement(){
+handleIncrement = () => {
     console.log('Increment Clicked', this);
 }
 
