@@ -12,8 +12,11 @@ class Counters extends Component {
       ]
   };
 
-  handleDelete = () => {
-      console.log('Event Handler called');
+  handleDelete = counterId => {
+    // we are not going to remove a counter from that array, we create a new array, let React compare and REACT updates the state. 
+    const counters = this.state.counters.filter(c => c.id !== counterId);
+    this.setState({counters}); 
+    // overwriting counters property with counters constant. 
   }; 
   
   render() {
