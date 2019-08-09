@@ -19,6 +19,7 @@ render() {
         >
             Increment
         </button>
+        <button className="btn btn-danger btn-sm m2">Delete</button>
       </div>
     );
   }
