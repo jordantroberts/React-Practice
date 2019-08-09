@@ -12,6 +12,15 @@ class Counters extends Component {
     ]
   };
 
+  handleReset = () => {
+    const counters = this.state.counters.map(c => {
+        c.value = 0;
+        return c;
+    });
+    // getting a new array of counters, resetting value to 0 and setting the state
+    this.setState({counters});
+  }; 
+
   handleDelete = counterId => {
     // we are not going to remove a counter from that array, we create a new array, let React compare and REACT updates the state.
     const counters = this.state.counters.filter(c => c.id !== counterId);
@@ -22,14 +31,17 @@ class Counters extends Component {
   render() {
     return (
       <div>
+        <button
+        onClick={this.handleReset} 
+        className="btn btn-primary btn-small m-2">Reset</button>
         {this.state.counters.map(counter => (
           <Counter
             key={counter.id}
             onDelete={this.handleDelete}
             counter={counter}
-            // This includes everything we need to know about the counter without the messy code. 
+            // This includes everything we need to know about the counter without the messy code.
           />
-          // The reason for passing both the counter.id to the key and the id is because the key is used internally for React and we can't access it by our Counter component. 
+          // The reason for passing both the counter.id to the key and the id is because the key is used internally for React and we can't access it by our Counter component.
         ))}
       </div>
     );
