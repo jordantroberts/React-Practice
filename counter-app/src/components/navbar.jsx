@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// convert this component into a Stateless Functional Component (using a function instead of class):
 
 const NavBar = ({totalCounters}) => {
   return (

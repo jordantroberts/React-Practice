@@ -18,7 +18,6 @@ class Counter extends Component {
       </div>
     );
   }
-  // Counter component raising the onDelete event and the Counters component is HANDLING the event.
 
   getBadgeClasses() {
     let classes = "badge m-2 badge-";
@@ -27,7 +26,6 @@ class Counter extends Component {
   }
 
   formatCount() {
-    // picking the count property from object and storing as a separate constant called count.
     const { value } = this.props.counter;
     return value === 0 ? "Zero" : value;
   }
