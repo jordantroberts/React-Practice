@@ -7,12 +7,13 @@ import NavBar from './components/navbar';
 class App extends Component{
   render() {
     return (
-      <div>
+      <div><center>
       <NavBar/>
       <h3>Details</h3>
       <Details name='Jordan' age='26'/>
       <h3>Preferences</h3>
       <Likes faveFood='burrito' faveDrink='coffee'/>
+      </center>
     </div>
     ); 
   }
